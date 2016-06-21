@@ -25,13 +25,13 @@ DB_NAME=$2
 
 if [ ! -f "$PARSE_FILE" ]
 then
-  echo "$PARSE_FILE file not found!"
+  echo "$PARSE_FILE file not found"
   exit 1
 fi
 
 if [ -z "$DB_NAME" ]
 then
-  echo "Database is not specified!"
+  echo "Database is not specified"
   exit 1
 fi
 
@@ -51,8 +51,7 @@ then
   exit 1
 fi
 
-
-`$SCRIPT_DIR/bin/parse-db-import "--path=$PREPARED_DIR" --adapter=postgresql "--dbname=$DB_NAME" ${@:3}`
+$SCRIPT_DIR/bin/parse-db-import "--path=$PREPARED_DIR" --adapter=postgresql "--dbname=$DB_NAME" ${@:3}
 
 if [ $? -ne 0 ]
 then
@@ -61,5 +60,6 @@ then
   exit 1
 fi
 
+echo "$PARSE_FILE imported into $DB_NAME database successfully"
 
 rm -r "$DATA_DIR"
