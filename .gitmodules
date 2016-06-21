@@ -1,3 +1,6 @@
 [submodule "prepare"]
 	path = prepare
 	url = git@github.com:ux/parse-migrator.git
+[submodule "import"]
+	path = import
+	url = git@github.com:ux/parse-db-import.git
