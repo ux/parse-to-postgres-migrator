@@ -1,0 +1,3 @@
+[submodule "prepare"]
+	path = prepare
+	url = git@github.com:ux/parse-migrator.git
